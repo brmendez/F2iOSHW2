@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+        var brian = Person(firstName: "Brian", lastName: "Mendez")
+        var rosterList = [brian]
+        
+        println(rosterList[0].firstName + " " + rosterList[0].lastName)
+        println(brian.fullName())
     }
 
     override func didReceiveMemoryWarning() {

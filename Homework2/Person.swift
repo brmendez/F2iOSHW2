@@ -16,8 +16,6 @@ class Person {
     
     
     var image : UIImage?
-    var hasImage = false
-    
     
     init(firstName : String, lastName : String) {
         self.firstName = firstName
