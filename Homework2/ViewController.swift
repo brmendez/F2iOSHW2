@@ -22,7 +22,7 @@ class ViewController: UIViewController {
                 var roster = [Person]()
             
             for var i = 0; i < firstNames.count; i++ {
-              roster.append(Person(firstName: nameFirst[i], lastName: nameLast[i]))
+              roster.append(Person(fName: nameFirst[i], lName: nameLast[i]))
             }
           
                 return(roster)

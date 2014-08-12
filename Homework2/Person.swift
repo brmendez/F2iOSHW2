@@ -15,9 +15,9 @@ class Person {
     var lastName : String
     var image : UIImage?
     
-    init(firstName : String, lastName : String) {
-        self.firstName = firstName
-        self.lastName = lastName
+    init(fName : String, lName : String) {
+        self.firstName = fName
+        self.lastName = lName
         
     }
     
