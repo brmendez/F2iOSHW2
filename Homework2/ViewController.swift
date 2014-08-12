@@ -14,13 +14,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
-        var brian = Person(firstName: "Brian", lastName: "Mendez")
-        var rosterList = [brian]
+        var personArray = [Person]()
+        var firstNames = ["Brian", "Kori", "Damon"]
+        var lastNames = ["Mendez", "Kolodziejczak", "Singh"]
         
-        println(rosterList[0].firstName + " " + rosterList[0].lastName)
-        println(brian.fullName())
+        func initRoster(nameFirst: [String], nameLast: [String]) -> [Person] {
+                var roster = [Person]()
+            
+            for var i = 0; i < firstNames.count; i++ {
+              roster.append(Person(firstName: nameFirst[i], lastName: nameLast[i]))
+            }
+          
+            return(roster)
+            
+        }
+        personArray = initRoster(firstNames, lastNames)
+        
+        for var j = 0; j < firstNames.count; j++ {
+            println(personArray[j].firstName + " " + (personArray[j].lastName))
+        }
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -28,4 +43,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
