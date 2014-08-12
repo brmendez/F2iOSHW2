@@ -25,9 +25,10 @@ class ViewController: UIViewController {
               roster.append(Person(firstName: nameFirst[i], lastName: nameLast[i]))
             }
           
-            return(roster)
+                return(roster)
             
         }
+        
         personArray = initRoster(firstNames, lastNames)
         
         for var j = 0; j < firstNames.count; j++ {
