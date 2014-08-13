@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
                             
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
@@ -18,30 +20,33 @@ class ViewController: UIViewController {
         var firstNames = ["Brian", "Kori", "Damon"]
         var lastNames = ["Mendez", "Kolodziejczak", "Singh"]
         
-        func initRoster(nameFirst: [String], nameLast: [String]) -> [Person] {
-                var roster = [Person]()
-            
-            for var i = 0; i < firstNames.count; i++ {
-              roster.append(Person(fName: nameFirst[i], lName: nameLast[i]))
-            }
-          
-                return(roster)
-            
-        }
+        personArray = initRoster(firstNames, nameLast: lastNames)
         
-        personArray = initRoster(firstNames, lastNames)
-        
-        for var j = 0; j < firstNames.count; j++ {
+        for var j = 0; j < firstNames.count; j++
+        {
             println(personArray[j].firstName + " " + (personArray[j].lastName))
         }
         
     }
     
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    func initRoster(nameFirst: [String], nameLast: [String]) -> [Person]
+    {
+        var roster = [Person]()
+        
+        //            for var i = 0; i < firstNames.count; i++ {
+        //              roster.append(Person(fName: nameFirst[i], lName: nameLast[i]))
+        //            }
+        
+        roster.append(Person(fName: "Brian", lName: "Mendez"))
+        
+        return roster
+        
+    }
 
 }
 
